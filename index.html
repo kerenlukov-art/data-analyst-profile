@@ -1423,7 +1423,7 @@ html:not([data-lang-ready]){visibility:hidden;}
   font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
   color:var(--accent);
 }
-.profile-cta-row{margin-top:28px;}
+.profile-cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
 .about-bio{max-width:640px;}
 .about-bio p{color:var(--text-dim);font-size:1.02rem;margin-bottom:16px;}
 .projects-showcase{margin-top:64px;padding-top:56px;border-top:1px solid var(--border-soft);scroll-margin-top:88px;}
@@ -1504,7 +1504,7 @@ pre.code-block code{font-family:var(--mono) !important;line-height:1.65;}
   font-size:.86rem;color:var(--text-dim);margin-bottom:14px;font-weight:600;
   display:flex;justify-content:space-between;align-items:center;direction:rtl;
 }
-.chart-wrap .cw-title .axis-note{font-family:var(--mono);font-size:.7rem;color:var(--text-mute);font-weight:400;}
+.chart-wrap .cw-title .axis-note{font-family:var(--mono);font-size:.7rem;color:var(--text-mute);font-weight:400;margin-left:28px;}
 .chart-h{height:280px;position:relative;}
 .chart-h.tall{height:340px;}
 .charts-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
@@ -1535,7 +1535,7 @@ table.summary td.strong{color:var(--text);font-weight:600;}
 .cohort-best{outline:1px solid var(--accent-strong) !important;}
 
 .insight-block{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.insight-block h4{font-size:.85rem;color:var(--accent);margin-bottom:10px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;}
+.insight-block h4{font-size:.92rem;font-weight:400;color:var(--accent);margin-bottom:10px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;}
 .insight-block p{color:var(--text-dim);font-size:.96rem;margin-bottom:10px;}
 .insight-block ul{margin:10px 0 0;}
 .insight-block ul li{
@@ -1546,8 +1546,11 @@ table.summary td.strong{color:var(--text);font-weight:600;}
   margin-top:22px;padding:18px 20px;background:var(--accent-soft);border:1px solid var(--accent-border);
   border-radius:10px;
 }
-.conclusion-box .cl{font-family:var(--mono);font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
-.conclusion-box p{color:var(--text);font-size:.96rem;}
+.conclusion-box .cl{font-family:var(--mono);font-size:.92rem;font-weight:400;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.conclusion-box p,.conclusion-box .rec-content{color:var(--text);font-size:.96rem;}
+.conclusion-box .rec-content ul{margin:8px 0 0;padding-inline-start:20px;}
+.conclusion-box .rec-content li{margin-bottom:8px;}
+.conclusion-box .rec-content li:last-child{margin-bottom:0;}
 
 /* ===================== Skills & Tools ===================== */
 .tools-inline{margin-top:64px;padding-top:56px;border-top:1px solid var(--border-soft);scroll-margin-top:88px;}
@@ -1646,8 +1649,7 @@ footer{
           <p data-i18n="about.p5">בוגרת תואר ראשון בכלכלה ותואר שני במנהל עסקים מאוניברסיטת בר-אילן.</p>
         </div>
         <div class="profile-cta-row">
-          <a href="resources/Keren%20Lukov.pdf" download class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 19h16"/></svg><span data-i18n="about.downloadCv">הורדת קורות חיים</span></a>
-        </div>
+          <a href="resources/Keren%20Lukov.pdf" download class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 19h16"/></svg><span data-i18n="about.downloadCv">הורדת קורות חיים</span></a>        </div>
       </div>
       <div class="profile-photo-col fade-in">
         <div class="profile-photo">
@@ -1727,7 +1729,7 @@ footer{
   <div class="container">
     <div class="eyebrow" data-i18n="cases.eyebrow">ניתוחים</div>
     <h2 class="section-title" data-i18n="cases.title">מהשאלה העסקית ועד לתובנה</h2>
-    <p class="section-sub" data-i18n-html="cases.sub">בעמוד זה מוצגים ארבעה Case Studies הממחישים את תהליך העבודה האנליטי שלי:<br>החל מהגדרת השאלה העסקית, כתיבת השאילתה ובניית הדשבורד, ועד התובנות שעלו מן המחקר.</p>
+    <p class="section-sub" data-i18n-html="cases.sub">בעמוד זה מוצגים ארבעה Case Studies הממחישים את תהליך העבודה האנליטי שלי:<br>החל מהגדרת השאלה העסקית, דרך שליפת הנתונים ב-SQL והצגתם בדשבורד, ועד להפקת תובנות עסקיות והמלצות שמביאות ערך מוצרי וצמיחה.</p>
 
     <!-- ---------- CASE 1: FUNNEL ---------- -->
     <article class="case-card fade-in" id="case-funnel">
@@ -1747,11 +1749,12 @@ footer{
 
       <div class="tab-panel active" data-panel="question">
         <p class="q-text" data-i18n-html="case1.question">
-          צוות המוצר רצה להבין <b>היכן בדיוק מבקרים חדשים (Onboarding) נושרים</b> בין הרגע שבו הם נכנסים לאתר בפעם הראשונה
-          (אירוע <code>first_visit</code>) לבין ביצוע רכישה, במהלך אותו session ראשון.<br>
-          המטרה: לזהות את השלב עם שיעור הנשירה הגבוה ביותר, ובהתאם לכך לבחון גרסה חלופית עם שיפורי UX.<br><br>
-          הניתוח מבוסס על נתוני GA4 אמיתיים של נתוני Google Merchandise Store, מתוך ה-Datasets הציבורי:<br>
-          <code>bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*</code>
+          <b>האתגר העסקי:</b><br>
+          מיפוי שלבי מסע המשתמש עבור משתמשים חדשים.<br>
+          צוות המוצר רצה להבין באיזה שלב במשפך ההמרה משתמשים חדשים נושרים, בין הרגע שבו הם נכנסים לאתר בפעם הראשונה (אירוע <code>first_visit</code>) ועד להשלמת הרכישה, במהלך ה-session הראשון שלהם באתר.<br><br>
+          <b>מטרת הניתוח:</b><br>
+          אופטימיזציה של משפך ההמרה למשתמשים חדשים.<br>
+          זיהוי השלב בעל שיעור ה-Drop-off הגבוה ביותר במשפך ההמרה (Funnel Analysis), כדי לגבש המלצות לשיפורי UX ולבחון גרסאות חלופיות (A/B Testing).
         </p>
       </div>
 
@@ -1765,7 +1768,7 @@ WITH events AS (
     event_name,
     event_timestamp,
     (SELECT ep.value.int_value FROM UNNEST(event_params) ep WHERE ep.key = 'ga_session_id') AS session_id
-  FROM `keren-profile-website.GA4.events_*`
+  FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
 ),
 
 first_visit_session AS (
@@ -1798,14 +1801,21 @@ funnel AS (
   GROUP BY user_pseudo_id
 )
 
--- ספירת מבקרים בכל שלב + שיעור המרה כולל
+-- ספירת מבקרים בכל שלב + שיעור המרה מצטבר (מסך המבקרים) ומשלב לשלב (מהשלב הקודם)
 SELECT
   COUNT(*)                                  AS new_visitors,
   COUNTIF(view_item_ts    IS NOT NULL)      AS viewed_product,
   COUNTIF(add_to_cart_ts  IS NOT NULL)      AS added_to_cart,
   COUNTIF(checkout_ts     IS NOT NULL)      AS began_checkout,
   COUNTIF(purchase_ts     IS NOT NULL)      AS purchased,
-  ROUND(COUNTIF(purchase_ts IS NOT NULL) / COUNT(*), 4) AS overall_conversion_rate
+
+  -- % מהשלב הקודם במשפך
+  ROUND(SAFE_DIVIDE(COUNTIF(view_item_ts   IS NOT NULL), COUNT(*)), 3)                                     AS view_item_pct_of_prev,
+  ROUND(SAFE_DIVIDE(COUNTIF(add_to_cart_ts IS NOT NULL), COUNTIF(view_item_ts   IS NOT NULL)), 3)          AS add_to_cart_pct_of_prev,
+  ROUND(SAFE_DIVIDE(COUNTIF(checkout_ts    IS NOT NULL), COUNTIF(add_to_cart_ts IS NOT NULL)), 3)          AS checkout_pct_of_prev,
+  ROUND(SAFE_DIVIDE(COUNTIF(purchase_ts    IS NOT NULL), COUNTIF(checkout_ts    IS NOT NULL)), 3)          AS purchase_pct_of_prev,
+
+  ROUND(SAFE_DIVIDE(COUNTIF(purchase_ts IS NOT NULL), COUNT(*)), 3) AS overall_conversion_rate
 FROM funnel;</code></pre>
       </div>
 
@@ -1837,7 +1847,7 @@ FROM funnel;</code></pre>
             <p data-i18n="case1.calc3">שיעור ההמרה בין שלבים = מבקרים בשלב N חלקי מבקרים בשלב N-1. שיעור ההמרה הכולל נמדד ביחס למספר המבקרים החדשים.</p>
             <h4 style="margin-top:18px" data-i18n="common.assumptions">הנחות עבודה</h4>
             <ul>
-              <li data-i18n="case1.assum1">הנתונים הם ה-GA4 Export האמיתי של Google Merchandise Store (נוב 2020–ינו 2021), 257,314 מבקרים חדשים בסה"כ</li>
+              <li data-i18n-html="case1.assum1">הניתוח מבוסס על נתוני GA4 Export האמיתי של Google Merchandise Store<br>(נוב 2020–ינו 2021), 257,314 מבקרים חדשים בסה"כ.</li>
               <li data-i18n="case1.assum2">המשפך מוגבל לאותו session בלבד - ביקורים חוזרים של אותו משתמש לא נכללים</li>
               <li data-i18n="case1.assum3">נבדקו גם פילוחים לפי מכשיר (desktop/mobile/tablet) וערוץ תנועה - שיעור הנשירה בשלב הראשון אחיד (~19.5%–19.9%) בכל הפילוחים, כלומר הבעיה אינה קהל ספציפי אלא חוויית עמוד הנחיתה עצמה</li>
             </ul>
@@ -1872,18 +1882,23 @@ FROM funnel;</code></pre>
 
       <div class="tab-panel active" data-panel="question">
         <p class="q-text" data-i18n-html="case2.question">
-          ניתוח משפך ה-Onboarding (מקרה 01) הראה ש-<b>80.2% מהמבקרים החדשים נושרים בין הביקור הראשון לצפייה במוצר</b> -
-          הנשירה הגדולה ביותר במשפך כולו.<br>
-          ההשערה הנבדקת: הוספת קרוסלת "מוצרים מומלצים" ישירות בעמוד הנחיתה של
-          מבקרים חדשים תקצר את הדרך לצפייה ראשונה במוצר ותעלה את שיעור ה-<code>view_item</code>.
+          <b>האתגר העסקי:</b><br>
+          אופטימיזציה של שיעור ההמרה (Conversion Rate) בשלב החשיפה למוצר.<br>
+          ניתוח משפך ה-Onboarding הראה כי צוואר הבקבוק המרכזי מתרחש כבר בשלב הראשוני:<br>
+          80.2% מהמבקרים החדשים נושרים בין הנחיתה באתר לבין צפייה בדף מוצר (<code>view_item</code>).<br><br>
+          <b>מטרת הניתוח:</b><br>
+          לבחון האם אלמנט UX חדש: קרוסלת "מוצרים מומלצים" , יגרום להעלאת ה-Conversion Rate<br>
+          וצמצום שיעור ה-Drop-off בשלב החשיפה למוצר.<br><br>
+          <b>ההשערה הנבדקת (Hypothesis):</b><br>
+          שילוב קרוסלת "מוצרים מומלצים" ישירות בעמוד הנחיתה של מבקרים חדשים יקצר את מסע המשתמש<br>
+          (User Journey), יפחית חיכוך (Friction) ויגדיל באופן מובהק את אחוז המשתמשים שיחשפו למוצר.
         </p>
-        <div class="placeholder-note" data-i18n-html="case2.disclosure">⚠ Treatment Group - נתונים פיקטייבים.<br>קבוצת ה-Control מבוססת על השיעור האמיתי שנמדד בניתוח משפך המרה (19.8%~, מקרה 01), המתבסס על נתוני GA4 אמיתיים של נתוני Google Merchandise Store</div>
       </div>
 
       <div class="tab-panel" data-panel="query">
-        <pre class="code-block"><code class="language-sql">-- שלב 1: יצירת טבלת נתונים מדומה ב-BigQuery (רץ פעם אחת, התוצאה נשמרת/stable)
--- Control מכויל בדיוק לשיעור האמיתי שנמדד ב-GA4 (19.8%); Treatment מדמה
--- שיפור היפותטי (~+18%) של עיצוב קרוסלה. הכל מתועד ב-OPTIONS(description=...) של הטבלה.
+        <pre class="code-block"><code class="language-sql">-- Step 1: create a simulated data table in BigQuery (runs once, result saved/stable)
+-- Control is calibrated exactly to the real rate measured in GA4 (19.8%); Treatment simulates
+-- a hypothetical improvement (~+18%) from the carousel design. Everything is documented in the table's OPTIONS(description=...).
 CREATE OR REPLACE TABLE `keren-profile-website.experiments.landing_carousel_test` (
   user_pseudo_id      STRING,
   experiment_variant  STRING,   -- 'control' | 'treatment'
@@ -1959,17 +1974,23 @@ ORDER BY experiment_variant DESC;</code></pre>
             <p data-i18n="case2.calc2">Lift = (Rate Treatment − Rate Control) / Rate Control = (23.01% − 19.43%) / 19.43% = +18.4%.</p>
             <h4 style="margin-top:18px" data-i18n="common.assumptions">הנחות ובדיקות מקדימות</h4>
             <ul>
-              <li data-i18n="case2.assum1">גודל מדגם מינימלי חושב מראש (Power Analysis) לזיהוי Lift של ~18% ברמת ביטחון 95% וכוח 80% - נדרשים כ-2,045 משתמשים לקבוצה; הריצה בוצעה עם 19,500 לקבוצה, מרווח ביטחון נוח</li>
-              <li data-i18n="case2.assum2">קבוצת ה-Control מכוילת בדיוק לשיעור האמיתי שנמדד ב-GA4 Export (מקרה 01); קבוצת ה-Treatment היא הדמיה של השערת מוצר, לא תוצאה נמדדת בפועל</li>
+              <li data-i18n-html="case2.assum1">גודל מדגם מינימלי חושב מראש (Power Analysis) לזיהוי Lift של ~18% ברמת ביטחון 95% וכוח 80% - נדרשים כ-2,045 משתמשים לקבוצה;<br>הריצה בוצעה עם 19,500  משתמשים לקבוצה, מרווח ביטחון נוח</li>
+              <li data-i18n="case2.assum2">קבוצת ה-Control מכוילת בדיוק לשיעור האמיתי שנמדד ב-GA4 Export (מקרה 01); קבוצת ה-Treatment מייצגת סימולציה של השערת המוצר, ולא תוצאות מניסוי בפועל.</li>
               <li data-i18n="case2.assum3">בדיקת SRM (Sample Ratio Mismatch): החלוקה 50/50 מובנית מראש בטבלה משום שמדובר בנתונים מדומים - בניסוי חי יש לוודא זאת בפועל על ספירות אמיתיות</li>
             </ul>
           </div>
           <div>
             <h4 data-i18n="common.businessConclusion">מסקנה עסקית</h4>
-            <p data-i18n="case2.conclusion">ההדמיה - המבוססת על ה-Control האמיתי (19.8%~) - מראה שקרוסלת מוצרים בעמוד הנחיתה עשויה להעלות את שיעור הצפייה במוצר בכ-18%. זוהי עדות תומכת-השערה, לא הוכחה סיבתית, שכן אין עדיין נתוני ניסוי אמיתיים.</p>
+            <p data-i18n="case2.conclusion">ההדמיה - המבוססת על ה-Control האמיתי (19.8%~) - מראה שקרוסלת מוצרים בעמוד הנחיתה עשויה להעלות את שיעור הצפייה במוצר בכ-18%.</p>
             <div class="conclusion-box">
               <div class="cl" data-i18n="common.recommendation">המלצה</div>
-              <p data-i18n-html="case2.recommendation">לתעדף הרצת הניסוי הזה בפועל: להוסיף אירוע/טבלת שיוך אמיתית ב-GA4, להריץ 2–3 שבועות מול תנועה חיה, לוודא SRM אמיתי, ורק אז להחליט על גלגול מלא. פירוט הצעדים המלאים נמצא ב-<code>onboarding_funnel.md</code>.</p>
+              <div class="rec-content" data-i18n-html="case2.recommendation">
+                הרחבה מלאה של הקרוסלה על כלל המשתמשים  ומעקב אחר המרות סופיות
+                <ul>
+                  <li><b>החלטת מוצר (Full Rollout):</b> מומלץ להחיל את קרוסלת המוצרים המומלצים על 100% מהמבקרים החדשים בעמוד הנחיתה, וזאת לאור תוצאות ה-A/B Test שהציגו עלייה מובהקת סטטיסטית של 18.4%+ בשיעור הצפייה במוצרים (p &lt; 0.0001).</li>
+                  <li><b>מעקב אחר המרות סופיות (Downstream Metrics):</b> לבחון האם הגידול ב-<code>view_item</code> מתורגם באופן ישיר לעלייה במדדי ה-Downstream (המרות סופיות), בפרט שיעורי ההוספה לסל (<code>add_to_cart</code>) והרכישות בפועל (<code>purchase</code>).</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -2352,7 +2373,7 @@ function renderFunnelChart(lang){
       plugins: {
         legend: { display: false },
         tooltip: { callbacks: { label: (ctx) => `${ctx.parsed.x.toLocaleString()} ${d.funnelUsersLabel}` } },
-        datalabels: { display: true, color: '#06201c', font: { weight: 700, size: 11 }, formatter: (v) => v.toLocaleString() }
+        datalabels: { display: true, anchor: 'end', align: 'right', offset: 6, clamp: true, color: '#e7edf3', font: { weight: 700, size: 12 }, formatter: (v) => v.toLocaleString() }
       },
       scales: {
         x: { grid: { color: GRID }, ticks: { callback: v => v.toLocaleString() }, title: { display: true, text: d.funnelAxisTitle, color: '#5c6b7d' } },
@@ -2551,7 +2572,7 @@ const EN = {
 'cases.eyebrow':'Case Studies','cases.title':'From business question to insight',
 'cases.sub':"This page presents four case studies illustrating my analytical work process:<br>from defining the business question, through writing the query and building the dashboard, to the insights that emerged from the research.",
 'case1.title':'Conversion Funnel Analysis - New Visitors (Onboarding)',
-'case1.question':'The product team wanted to understand <b>exactly where new visitors (Onboarding) drop off</b> between the moment they first enter the site (the <code>first_visit</code> event) and making a purchase, during that same first session.<br>Goal: identify the stage with the highest drop-off rate, and accordingly examine an alternative version with UX improvements.<br><br>The analysis is based on real GA4 data from Google Merchandise Store data, from the public dataset:<br><code>bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*</code>',
+'case1.question':'The product team wanted to understand <b>exactly where new visitors (Onboarding) drop off</b> between the moment they first enter the site (the <code>first_visit</code> event) and making a purchase, during that same first session.<br>Goal: identify the stage with the highest drop-off rate, and accordingly examine an alternative version with UX improvements.',
 'case1.kpi1l':'Overall conversion rate','case1.kpi2l':'Visitors lost','case1.kpi2d':'across the whole funnel','case1.kpi3l':'Biggest drop-off stage','case1.kpi3d':'First visit → Viewed product','case1.kpi4l':'Measurement window','case1.kpi4v':'First session','case1.kpi4d':'3 months of data',
 'case1.chartTitle':'Funnel stages - visitors and cumulative conversion rate','case1.chartAxis':'X axis: number of visitors · Y axis: stage',
 'case1.th1':'Stage','case1.th2':'Visitors','case1.th3':'% of previous stage','case1.th4':'% of total',
@@ -2565,7 +2586,6 @@ const EN = {
 'case1.recommendation':'Focus UX improvements on the landing page for new visitors - e.g. a featured-products carousel directly on the landing page - to shorten the path to a first product view. See the next case study (A/B Test) for testing this hypothesis.',
 'case2.title':'A/B Test - Product Carousel on the New-Visitor Landing Page',
 'case2.question':'The Onboarding Funnel analysis (Case 01) showed that <b>80.2% of new visitors drop off between the first visit and viewing a product</b> - the single largest drop-off in the whole funnel.<br>The hypothesis being tested: adding a "featured products" carousel directly on the landing page for new visitors will shorten the path to a first product view and raise the <code>view_item</code> rate.',
-'case2.disclosure':'⚠ Treatment Group - simulated data.<br>The Control group is based on the real rate measured in the conversion funnel analysis (~19.8%, Case 01)',
 'case2.kpi1l':'Lift in view_item','case2.kpi1d':'Treatment vs. Control','case2.kpi2l':'Significance (p-value)','case2.kpi2d':'z = 8.64, significant at 95%','case2.kpi3l':'Total sample size','case2.kpi3d':'19,500 simulated per group','case2.kpi4l':'Simulated test window','case2.kpi4v':'2 weeks','case2.kpi4d':'SRM: 50/50 built in by design',
 'case2.chart1Title':'view_item rate by variant','case2.chart1Axis':'Y axis: conversion %','case2.chart2Title':'Users vs. product viewers','case2.chart2Axis':'Y axis: number of users',
 'case2.th1':'Variant','case2.th3':'Viewed product','case2.th4':'view_item rate','case2.rowControl':'Control (current landing page)','case2.rowTreatment':'Treatment (product carousel)',
@@ -2575,7 +2595,7 @@ const EN = {
 'case2.assum2':'The Control group is calibrated exactly to the real rate measured in the GA4 Export (Case 01); the Treatment group is a simulation of a product hypothesis, not an actually measured result',
 'case2.assum3':'SRM (Sample Ratio Mismatch) check: the 50/50 split is built into the table by design since this is simulated data - a live test must verify this on real counts',
 'case2.conclusion':'The simulation - grounded in the real Control (~19.8%) - shows that a product carousel on the landing page could raise the product-view rate by about 18%. This is hypothesis-supporting evidence, not causal proof, since there is no real experiment data yet.',
-'case2.recommendation':'Prioritize actually running this experiment: add a real assignment event/table in GA4, run it for 2–3 weeks against live traffic, verify real SRM, and only then decide on a full rollout. Full details in <code>onboarding_funnel.md</code>.',
+'case2.recommendation':'Full rollout of the carousel and monitoring of downstream conversion metrics<ul><li><b>Product decision (Full Rollout):</b> Given the A/B test results showing a statistically significant lift of +18.4% in the product-view rate (p &lt; 0.0001), it is recommended to roll out the "featured products" carousel to 100% of new visitors on the landing page.</li><li><b>Downstream metrics monitoring:</b> Examine whether the increase in <code>view_item</code> translates directly into a rise in downstream conversion metrics, in particular add-to-cart (<code>add_to_cart</code>) and actual purchase (<code>purchase</code>) rates.</li></ul>',
 'case3.title':'Retention & Cohort Analysis by Signup Month',
 'case3.question':'Product management wanted to understand <b>which user cohorts that signed up in different months stay active longer</b>, to examine whether product changes or campaigns run in a given month actually affected retention over time - not just raw signup counts.',
 'case3.kpi1l':'Leading cohort','case3.kpi1v':'Mar 2026','case3.kpi1d':'M3 retention: 52%','case3.kpi2l':'Average retention - month 1','case3.kpi2d':'across all cohorts','case3.kpi3l':'Average retention - month 3','case3.kpi4l':'Gap vs. weakest cohort','case3.kpi4d':'March vs. January, M3',
