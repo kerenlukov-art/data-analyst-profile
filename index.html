@@ -1431,7 +1431,7 @@ html:not([data-lang-ready]){visibility:hidden;}
   font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;letter-spacing:-.01em;
   margin-bottom:28px;
 }
-.project-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.project-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;}
 .project-card{
   display:block;text-align:start;background:var(--card);border:1px solid var(--border);
   border-radius:var(--radius);padding:22px 20px;transition:.2s;
@@ -1451,7 +1451,7 @@ html:not([data-lang-ready]){visibility:hidden;}
 .cases{padding:110px 0;border-top:1px solid var(--border-soft);}
 .case-card{
   background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  margin-bottom:32px;overflow:hidden;
+  margin-bottom:32px;overflow:hidden;scroll-margin-top:88px;
 }
 .case-head{
   padding:26px 30px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
@@ -1645,7 +1645,7 @@ footer{
           <p data-i18n="about.p1">דאטה אנליסטית מוצר עם 3 שנות ניסיון, המתמחה בהפיכת שאלות עסקיות מורכבות לתובנות מבוססות נתונים, התומכות בקבלת החלטות אסטרטגיות לצמיחת המוצר.</p>
           <p data-i18n-html="about.p2">בעלת חשיבה אנליטית ועסקית עם ניסיון רב בניתוח התנהגות משתמשים, הגדרת מדדי KPIs,<br>זיהוי מגמות והזדמנויות ובניית פתרונות BI המנגישים מידע לצוותים העסקיים.</p>
           <p data-i18n="about.p3">מנוסה בכתיבת שאילתות SQL מורכבות בסביבת BigQuery ובבניית דשבורדים ניהוליים ב-Tableau וב-Power BI.</p>
-          <p data-i18n="about.p4">בעבודתי אני נוהגת לשלב כלי AI מגוונים לצורך מחקר וניתוח נתונים, אופטימיזציה של שאילתות SQL והפקת תובנות וייעול&nbsp;תהליכי&nbsp;העבודה.</p>
+          <p data-i18n="about.p4">בעבודתי אני משלבת כלי AI מגוונים לצורך מחקר, ניתוח נתונים, אופטימיזציה של שאילתות SQL וייעול תהליכי עבודה - מתוך סקרנות ורצון מתמיד ללמוד טכנולוגיות וכלים חדשים.</p>
           <p data-i18n="about.p5">בוגרת תואר ראשון בכלכלה ותואר שני במנהל עסקים מאוניברסיטת בר-אילן.</p>
         </div>
         <div class="profile-cta-row">
@@ -1709,13 +1709,18 @@ footer{
           <h4 data-i18n="about.proj2Title">ניסויי A/B</h4>
           <p data-i18n="about.proj2Sub">תכנון והרצה של ניסויים סטטיסטיים</p>
         </a>
+        <a href="#case-adoption" class="project-card">
+          <div class="project-card-top"><span class="project-icon">🚀</span><span class="project-num">03</span></div>
+          <h4 data-i18n="about.proj5Title">אימוץ פיצ'ר חדש</h4>
+          <p data-i18n="about.proj5Sub">מדידת שיעור האימוץ בהשקת פיצ'ר חדש</p>
+        </a>
         <a href="#case-retention" class="project-card">
-          <div class="project-card-top"><span class="project-icon">🔁</span><span class="project-num">03</span></div>
+          <div class="project-card-top"><span class="project-icon">🔁</span><span class="project-num">04</span></div>
           <h4 data-i18n="about.proj3Title">ניתוח שימור לקוחות</h4>
           <p data-i18n="about.proj3Sub">הפקת תובנות לשיפור (Retention)</p>
         </a>
         <a href="#case-marketing" class="project-card">
-          <div class="project-card-top"><span class="project-icon">📊</span><span class="project-num">04</span></div>
+          <div class="project-card-top"><span class="project-icon">📊</span><span class="project-num">05</span></div>
           <h4 data-i18n="about.proj4Title">דשבורדים להנהלה</h4>
           <p data-i18n="about.proj4Sub">מעקב שוטף אחר מדדי ליבה מרכזיים</p>
         </a>
@@ -1729,7 +1734,7 @@ footer{
   <div class="container">
     <div class="eyebrow" data-i18n="cases.eyebrow">ניתוחים</div>
     <h2 class="section-title" data-i18n="cases.title">מהשאלה העסקית ועד לתובנה</h2>
-    <p class="section-sub" data-i18n-html="cases.sub">בעמוד זה מוצגים ארבעה Case Studies הממחישים את תהליך העבודה האנליטי שלי:<br>החל מהגדרת השאלה העסקית, דרך שליפת הנתונים ב-SQL והצגתם בדשבורד, ועד להפקת תובנות עסקיות והמלצות שמביאות ערך מוצרי וצמיחה.</p>
+    <p class="section-sub" data-i18n-html="cases.sub">בעמוד זה מוצגים חמישה Case Studies הממחישים את תהליך העבודה האנליטי שלי:<br>החל מהגדרת השאלה העסקית, דרך שליפת הנתונים ב-SQL והצגתם בדשבורד, ועד להפקת תובנות עסקיות והמלצות שמביאות ערך מוצרי וצמיחה.</p>
 
     <!-- ---------- CASE 1: FUNNEL ---------- -->
     <article class="case-card fade-in" id="case-funnel">
@@ -1997,12 +2002,144 @@ ORDER BY experiment_variant DESC;</code></pre>
       </div>
     </article>
 
-    <!-- ---------- CASE 3: RETENTION / COHORT ---------- -->
+    <!-- ---------- CASE 3: NEW FEATURE ADOPTION ---------- -->
+    <article class="case-card fade-in" id="case-adoption">
+      <div class="case-head">
+        <div>
+          <span class="case-num">03 · FEATURE ADOPTION</span>
+          <h3 data-i18n="case3.title">אימוץ פיצ'ר חדש - Saved Searches (חשיפה לעומת אימוץ)</h3>
+        </div>
+        <div class="case-tags"><span>Feature Adoption</span><span>BigQuery</span><span>Simulated data</span></div>
+      </div>
+      <div class="tabs" data-case="adoption">
+        <button class="tab-btn active" data-tab="question" data-i18n="tabs.question">שאלה עסקית</button>
+        <button class="tab-btn" data-tab="query" data-i18n="tabs.query">השאילתה</button>
+        <button class="tab-btn" data-tab="dashboard" data-i18n="tabs.dashboard">הדשבורד</button>
+        <button class="tab-btn" data-tab="insight" data-i18n="tabs.insight">תובנה ומתודולוגיה</button>
+      </div>
+
+      <div class="tab-panel active" data-panel="question">
+        <p class="q-text" data-i18n-html="case3.question">
+          <b>האתגר העסקי:</b><br>
+          שיעור האימוץ הכולל של פיצ'ר חדש (Saved Searches) עומד על 15.4% בלבד מתוך כלל המשתמשים הפעילים שנדגמו כחודש לאחר השקת הפיצ'ר - נתון נמוך, אך לא ברור האם הסיבה היא שמשתמשים כלל לא מודעים לקיום הפיצ'ר, או שהם מודעים אליו ובוחרים שלא להשתמש בו.<br><br>
+          <b>מטרת הניתוח:</b><br>
+          לפרק את שיעור האימוץ הכולל לשני שלבים נפרדים:<br>
+          חשיפה (Exposure) ואימוץ בהינתן חשיפה (Adoption given Exposure),<br>
+          וזאת כדי לבחון האם מדובר בבעיית הפצה/מיקום (משתמשים לא נחשפים לפיצ'ר) או בבעיית ערך (משתמשים נחשפים אך לא מוצאים ערך בפיצ'ר).<br><br>
+          <b>ההשערה הנבדקת (Hypothesis):</b><br>
+          רוב הפער בשיעור האימוץ הכולל נובע משיעור חשיפה נמוך - רוב המשתמשים כלל לא מגיעים לעמוד שבו הפיצ'ר מוצג - ולא מחוסר עניין בפיצ'ר בקרב מי שכן נחשף אליו.
+        </p>
+      </div>
+
+      <div class="tab-panel" data-panel="query">
+        <pre class="code-block"><code class="language-sql">-- Step 1: create a simulated feature-exposure-funnel dataset in BigQuery (runs once, result saved/stable)
+-- The feature launched to 100% of the active user base at once (no staged rollout) on 2026-01-01.
+-- This query was sampled on 2026-01-31 - exactly 30 days after launch - so every active user gets
+-- an equal, fully-elapsed 30-day observation window (no user is undercounted just for having had
+-- less time since launch). Exposure probability = 0.28; given exposure, adoption probability = 0.55.
+-- Everything is documented in the table's OPTIONS(description=...).
+CREATE OR REPLACE TABLE `keren-profile-website.experiments.feature_exposure_funnel` (
+  user_id          STRING,
+  exposed_date     DATE,   -- מועד הביקור הראשון בעמוד שבו מוצג הפיצ'ר, בתוך 30 הימים מרגע ההשקה; NULL אם מעולם לא ביקר
+  first_used_date  DATE    -- מועד השימוש הראשון בפועל, בתוך 30 הימים מרגע ההשקה; NULL אם מעולם לא השתמש
+)
+OPTIONS (description = "SIMULATED feature-exposure-funnel data. NOT real product usage data. " ||
+  "Launch date = 2026-01-01, presented to 100% of the active user base at once (no staged rollout). " ||
+  "Measurement date = 2026-01-31 (30 days post-launch), giving every user an equal, fully-elapsed " ||
+  "observation window. Exposure probability = 0.28; given exposure, adoption probability = 0.55. " ||
+  "Generated by Claude.")
+AS
+SELECT
+  CONCAT('sim_user_', LPAD(CAST(row_num AS STRING), 6, '0')) AS user_id,
+  IF(is_exposed, exposed_date, NULL) AS exposed_date,
+  IF(is_exposed AND is_adopted, adopted_date, NULL) AS first_used_date
+FROM (
+  SELECT
+    row_num,
+    RAND() < 0.28 AS is_exposed,
+    RAND() < 0.55 AS is_adopted,
+    DATE_ADD(DATE('2026-01-01'), INTERVAL CAST(RAND()*30 AS INT64) DAY) AS exposed_date,
+    DATE_ADD(DATE('2026-01-01'), INTERVAL CAST(RAND()*30 AS INT64) DAY) AS adopted_date
+  FROM UNNEST(GENERATE_ARRAY(1, 40000)) AS row_num
+);
+
+-- שלב 2: שיעורי חשיפה ואימוץ, נמדד ב-2026-01-31 - 30 יום בדיוק לאחר ההשקה, זהה לכל המשתמשים
+SELECT
+  COUNT(*)                                                                                        AS active_users,
+  COUNTIF(exposed_date IS NOT NULL)                                                                AS exposed_users,
+  COUNTIF(first_used_date IS NOT NULL)                                                             AS adopted_users,
+  ROUND(SAFE_DIVIDE(COUNTIF(exposed_date IS NOT NULL), COUNT(*)), 4)                                AS exposure_rate,
+  ROUND(SAFE_DIVIDE(COUNTIF(first_used_date IS NOT NULL), COUNTIF(exposed_date IS NOT NULL)), 4)    AS adoption_rate_given_exposure,
+  ROUND(SAFE_DIVIDE(COUNTIF(first_used_date IS NOT NULL), COUNT(*)), 4)                            AS overall_adoption_rate
+FROM `keren-profile-website.experiments.feature_exposure_funnel`
+WHERE exposed_date IS NULL OR exposed_date <= DATE('2026-01-31');  -- מוודא שרק תצפיות בתוך חלון 30 הימים נספרות</code></pre>
+      </div>
+
+      <div class="tab-panel" data-panel="dashboard">
+        <div class="kpi-row">
+          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi1l">שיעור חשיפה</div><div class="kv">28.0%</div><div class="kd" data-i18n="case3.kpi1d">11,200 מתוך 40,000 משתמשים פעילים</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi2l">שיעור אימוץ בהינתן חשיפה</div><div class="kv good">55.0%</div><div class="kd" data-i18n="case3.kpi2d">6,160 מתוך 11,200 שנחשפו</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi3l">שיעור אימוץ כולל</div><div class="kv">15.4%</div><div class="kd" data-i18n="case3.kpi3d">6,160 מתוך 40,000 משתמשים פעילים</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi4l">אבחנה</div><div class="kv" style="font-size:1.1rem" data-i18n="case3.kpi4v">בעיית חשיפה</div><div class="kd" data-i18n="case3.kpi4d">לא בעיית ערך של הפיצ'ר</div></div>
+        </div>
+        <div class="charts-grid two">
+          <div class="chart-wrap">
+            <div class="cw-title"><span data-i18n="case3.chart1Title">משפך חשיפה ואימוץ</span> <span class="axis-note" data-i18n="case3.chart1Axis">ציר X: מספר משתמשים · ציר Y: שלב</span></div>
+            <div class="chart-h"><canvas id="chart-adopt-bar"></canvas></div>
+          </div>
+          <div class="chart-wrap">
+            <div class="cw-title"><span data-i18n="case3.chart2Title">חשיפה מול אימוץ בהינתן חשיפה</span> <span class="axis-note" data-i18n="case3.chart2Axis">ציר Y: אחוז (%)</span></div>
+            <div class="chart-h"><canvas id="chart-adopt-curve"></canvas></div>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="summary">
+            <thead><tr><th data-i18n="case3.th1">שלב</th><th class="num" data-i18n="case3.th2">משתמשים</th><th class="num" data-i18n="case3.th3">% מסך הפעילים</th><th class="num" data-i18n="case3.th4">% מהשלב הקודם</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="case3.rowEligible">פעילים</td><td class="num strong">40,000</td><td class="num">100.0%</td><td class="num">–</td></tr>
+              <tr><td data-i18n="case3.rowExposed">נחשפו (ביקרו בעמוד)</td><td class="num">11,200</td><td class="num">28.0%</td><td class="num">28.0%</td></tr>
+              <tr><td class="strong" data-i18n="case3.rowAdopted">אימצו (השתמשו בפועל)</td><td class="num strong">6,160</td><td class="num strong">15.4%</td><td class="num strong">55.0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="insight">
+        <div class="insight-block">
+          <div>
+            <h4 data-i18n="common.howCalculated">איך המדד חושב</h4>
+            <p data-i18n-html="case3.calc1">שיעור אימוץ כולל (15.4%)= משתמשים שאימצו חלקי סך המשתמשים הפעילים.<br>שיעור חשיפה (28.0%)= משתמשים שנחשפו חלקי סך המשתמשים הפעילים.<br>שיעור אימוץ בהינתן חשיפה (55.0%) = משתמשים שאימצו חלקי משתמשים שנחשפו.</p>
+            <h4 style="margin-top:18px" data-i18n="common.assumptions">הנחות ובדיקות מקדימות</h4>
+            <ul>
+              <li data-i18n="case3.assum1">"חשיפה" מוגדרת כביקור בעמוד שבו הפיצ'ר מוצג</li>
+              <li data-i18n="case3.assum2">הנתונים הינם סימולציה להמחשת הניתוח ואינם מייצגים מדידה בפועל.</li>
+              <li data-i18n="case3.assum3">הפיצ'ר הושק לכלל המשתמשים הפעילים (ללא Rollout מדורג), והמדידה בוצעה 30 יום בדיוק לאחר ההשקה - כך שלכל משתמש ניתן חלון תצפית שווה ומלא.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-i18n="common.businessConclusion">מסקנה עסקית</h4>
+            <p data-i18n="case3.conclusion">השיעור הנמוך של האימוץ הכולל של הפיצ'ר החדש (15.4%) מוסבר על ידי שיעור חשיפה נמוך (28.0%), ולא על ידי חוסר ענין בפיצ'ר: מבין המשתמשים שנחשפו, למעלה ממחצית (55.0%) בחרו להשתמש בו - מה שמעיד על ערך גבוה יחסית בקרב המשתמשים שנחשפו לפיצ'ר.</p>
+            <div class="conclusion-box">
+              <div class="cl" data-i18n="common.recommendation">המלצה</div>
+              <div class="rec-content" data-i18n-html="case3.recommendation">
+                קידום חשיפה, לא שינוי הפיצ'ר
+                <ul>
+                  <li><b>החלטת מוצר (Improve Discovery):</b> להשקיע במיקום ובבולטות הפיצ'ר בעמודים הרלוונטיים (למשל Empty State ממוקד, Tooltip בביקור ראשון, או הבלטה ויזואלית) לפני בחינת שינויים בפיצ'ר עצמו.</li>
+                  <li><b>מדידה חוזרת (Re-measurement):</b> לאחר שיפור החשיפה, למדוד מחדש את שיעור החשיפה ולוודא ששיעור האימוץ-בהינתן-חשיפה (55.0%) נשמר גם בקרב גל החשיפה החדש - שכן הגברת החשיפה עלולה למשוך גם משתמשים בעלי עניין נמוך יותר בפיצ'ר.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---------- CASE 4: RETENTION / COHORT ---------- -->
     <article class="case-card fade-in" id="case-retention">
       <div class="case-head">
         <div>
-          <span class="case-num">03 · RETENTION</span>
-          <h3 data-i18n="case3.title">ניתוח שימור ו-Cohort לפי חודש הצטרפות</h3>
+          <span class="case-num">04 · RETENTION</span>
+          <h3 data-i18n="case4.title">ניתוח שימור ו-Cohort לפי חודש הצטרפות</h3>
         </div>
         <div class="case-tags"><span>Cohort Analysis</span><span>BigQuery</span><span>Simulated data</span></div>
       </div>
@@ -2014,10 +2151,11 @@ ORDER BY experiment_variant DESC;</code></pre>
       </div>
 
       <div class="tab-panel active" data-panel="question">
-        <p class="q-text" data-i18n-html="case3.question">
-          ניהול המוצר רצה להבין <b>אילו קבוצות משתמשים (cohorts) שנרשמו בחודשים שונים נשארות פעילות זמן רב יותר</b>,
-          כדי לבחון האם שינויי מוצר או קמפיינים שבוצעו בחודש מסוים השפיעו בפועל על השימור לאורך זמן -
-          ולא רק על מספר ההרשמות הגולמי.
+        <p class="q-text" data-i18n-html="case4.question">
+          <b>האתגר העסקי:</b><br>
+          צוות המוצר ביקש לבחון אילו קבוצות משתמשים (Cohorts), בהתאם לחודש ההרשמה, מציגות שיעורי שימור גבוהים יותר לאורך זמן.<br><br>
+          <b>מטרת הניתוח:</b><br>
+          לבחון האם שינויי מוצר או קמפיינים שבוצעו בחודש מסוים השפיעו בפועל על השימור לאורך זמן - ולא רק על מספר ההרשמות הגולמי.
         </p>
       </div>
 
@@ -2070,17 +2208,17 @@ ORDER BY 1, 2;</code></pre>
 
       <div class="tab-panel" data-panel="dashboard">
         <div class="kpi-row">
-          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi1l">ה-Cohort המוביל</div><div class="kv good" data-i18n="case3.kpi1v">מרץ 2026</div><div class="kd" data-i18n="case3.kpi1d">שימור M3: 52%</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi2l">שימור ממוצע - חודש 1</div><div class="kv">62.8%</div><div class="kd" data-i18n="case3.kpi2d">כלל ה-Cohorts</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi3l">שימור ממוצע - חודש 3</div><div class="kv">45.3%</div><div class="kd" data-i18n="case3.kpi2d">כלל ה-Cohorts</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case3.kpi4l">פער מול ה-Cohort החלש</div><div class="kv" style="color:var(--warn)">+11pt</div><div class="kd" data-i18n="case3.kpi4d">מרץ מול ינואר, M3</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi1l">תחילת שיפור מתמשך</div><div class="kv good" data-i18n="case4.kpi1v">מרץ 2026</div><div class="kd" data-i18n="case4.kpi1d">נמשך גם באפריל-יוני</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi2l">שימור ממוצע - חודש 1</div><div class="kv">64.2%</div><div class="kd" data-i18n="case4.kpi2d">כלל ה-Cohorts</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi3l">שימור ממוצע - חודש 3</div><div class="kv">46.5%</div><div class="kd" data-i18n="case4.kpi2d">כלל ה-Cohorts</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi4l">פער שימור: אחרי מול לפני השינוי</div><div class="kv" style="color:var(--warn)">+11pt</div><div class="kd" data-i18n="case4.kpi4d">מרץ מול ינואר, M3</div></div>
         </div>
         <div class="chart-wrap">
-          <div class="cw-title"><span data-i18n="case3.chart1Title">מפת שימור לפי Cohort</span> <span class="axis-note" data-i18n="case3.chart1Axis">שורות: חודש הצטרפות · עמודות: חודשים מאז ההצטרפות</span></div>
+          <div class="cw-title"><span data-i18n="case4.chart1Title">מפת שימור לפי Cohort</span> <span class="axis-note" data-i18n="case4.chart1Axis">שורות: חודש הצטרפות · עמודות: חודשים מאז ההצטרפות</span></div>
           <div class="table-scroll"><table class="cohort-table" id="cohort-table"></table></div>
         </div>
         <div class="chart-wrap">
-          <div class="cw-title"><span data-i18n="case3.chart2Title">עקומת שימור - שלושת ה-Cohorts המובילים</span> <span class="axis-note" data-i18n="case3.chart2Axis">ציר X: חודשים מאז הצטרפות · ציר Y: % משתמשים פעילים</span></div>
+          <div class="cw-title"><span data-i18n="case4.chart2Title">עקומת שימור - השפעת שינוי הקמפיין לאורך זמן</span> <span class="axis-note" data-i18n="case4.chart2Axis">ציר X: חודשים מאז הצטרפות · ציר Y: % משתמשים פעילים</span></div>
           <div class="chart-h"><canvas id="chart-retention-curve"></canvas></div>
         </div>
       </div>
@@ -2089,21 +2227,22 @@ ORDER BY 1, 2;</code></pre>
         <div class="insight-block">
           <div>
             <h4 data-i18n="common.howCalculated">איך המדד חושב</h4>
-            <p data-i18n="case3.calc1">שימור בחודש N = מספר המשתמשים הייחודיים מתוך ה-cohort שהיו פעילים בחודש הקלנדרי ה-N ביחס להרשמה, חלקי גודל ה-cohort המקורי.</p>
-            <p data-i18n="case3.calc2">"פעילות" הוגדרה כאירוע session_start בודד לפחות באותו חודש - לא נדרשת פעילות רציפה בין החודשים.</p>
+            <p data-i18n="case4.calc1">שימור בחודש N = מספר המשתמשים הייחודיים מתוך ה-cohort שהיו פעילים בחודש הקלנדרי ה-N ביחס להרשמה, חלקי גודל ה-cohort המקורי.</p>
+            <p data-i18n="case4.calc2">"פעילות" הוגדרה כאירוע session_start בודד לפחות באותו חודש - לא נדרשת פעילות רציפה בין החודשים.</p>
             <h4 style="margin-top:18px" data-i18n="common.assumptions">הנחות עבודה</h4>
             <ul>
-              <li data-i18n="case3.assum1">Cohort מוגדר לפי חודש הפעילות הראשונה, לא לפי תאריך יצירת החשבון</li>
-              <li data-i18n="case3.assum2">Cohorts שטרם הגיעו לגיל N חודשים מוצגים כ-N/A ולא כ-0%, כדי לא להטות את הממוצע</li>
-              <li data-i18n="case3.assum3">הושוו רק cohorts עם גודל מדגם דומה (10K–14K משתמשים)</li>
+              <li data-i18n="case4.assum1">Cohort מוגדר לפי חודש הפעילות הראשונה, לא לפי תאריך יצירת החשבון</li>
+              <li data-i18n="case4.assum2">Cohorts שטרם הגיעו לגיל N חודשים מוצגים כ-N/A ולא כ-0%, כדי לא להטות את הממוצע</li>
+              <li data-i18n="case4.assum3">הושוו רק cohorts עם גודל מדגם דומה (10K–14K משתמשים)</li>
+              <li data-i18n="case4.assum4">ניתוח ברמת חודש-הצטרפות בלבד אינו מבחין בין מעבר לקמפיין ממוקד יותר בתוך אותו ערוץ (Google Ads) לבין שינוי מוצרי כללי; יש לעקוב אחרי אותו Campaign ID הספציפי לאורך זמן (לא רק לפי ערוץ כללי) כדי לבודד את האפקט הנכון</li>
             </ul>
           </div>
           <div>
             <h4 data-i18n="common.businessConclusion">מסקנה עסקית</h4>
-            <p data-i18n="case3.conclusion">ה-cohort שהצטרף במרץ 2026 שומר על שימור גבוה משמעותית לעומת ה-cohorts השכנים (ינואר-פברואר) בכל אחד מהחודשים שנמדדו.</p>
+            <p data-i18n-html="case4.conclusion">כל ה-cohorts שהצטרפו החל ממרץ 2026 (מרץ, אפריל, מאי, יוני) מציגים אחוז שימור גבוה ועקבי ביחס ל-cohorts שקדמו להם (ינואר-פברואר), בכל אחד מהחודשים שנמדדו. כלומר חל שינוי חיובי החל ממרץ שגרם לעליה בשימור.<br><br>כעת עלינו לבחון האם העליה בשימור נובעת משינוי מוצרי שחל בחודש מרץ או משינוי בקמפיין.<br><br>ידע מקדים - החל מתחילת מרץ חל שינויי בקמפיין ב-Google Ads:<br>מעבר מקמפיין גנרי (מילות מפתח וקהל יעד רחבים) לקמפיין ממוקד-קהל.<br><br><b>כיצד לבחון האם העלייה בשימור נובעת משינוי מוצרי או מקמפיין ממוקד?</b><br>יש לבדוק את שיעורי השימור של משתמשים שהצטרפו החל ממרץ 2026, בחלוקה לפי הקמפיינים השונים:<br>אם שיעור השימור של משתמשים מקמפיינים אחרים באותה תקופה (מרץ-יוני) נשאר זהה לרמת הבסיס שנצפתה (בינואר-פברואר) - זה מחזק את ההשערה שהשיפור מקורו ספציפית בקמפיין הממוקד, ולא בשינוי מוצרי גורף.<br>לעומת זאת, אם גם משתמשים מקמפיינים אחרים  מציגים שימור גבוה יותר ביחס  לרמת הבסיס - זו עדות לשינוי מוצרי שהשפיע על כלל המשתמשים החדשים.</p>
             <div class="conclusion-box">
               <div class="cl" data-i18n="common.recommendation">המלצה</div>
-              <p data-i18n="case3.recommendation">התאריך חופף להשקת עיצוב Onboarding מחודש בתחילת מרץ. מומלץ לבצע ניתוח סיבתי (או A/B ריטרואקטיבי) כדי לאשר קשר סיבתי, ואם מאושר - לשקול backport של הרכיב לזרם המשתמשים הוותיקים.</p>
+              <p data-i18n="case4.recommendation">מומלץ לעקוב אחרי שיעור השימור של הקמפיין הממוקד הספציפי (לפי Campaign ID) לאורך זמן, ולוודא שהשיפור נמשך בעקביות בחודשים הבאים ובהתאם לכך להשקיע בקמפיינים ממוקדי-קהל.</p>
             </div>
           </div>
         </div>
@@ -2114,8 +2253,8 @@ ORDER BY 1, 2;</code></pre>
     <article class="case-card fade-in" id="case-marketing">
       <div class="case-head">
         <div>
-          <span class="case-num">04 · MARKETING</span>
-          <h3 data-i18n="case4.title">דשבורד KPI שיווקי - CTR · CPA · ROAS</h3>
+          <span class="case-num">05 · MARKETING</span>
+          <h3 data-i18n="case5.title">דשבורד KPI שיווקי - CTR · CPA · ROAS</h3>
         </div>
         <div class="case-tags"><span>KPI Tracking</span><span>BigQuery</span><span>Simulated data</span></div>
       </div>
@@ -2127,7 +2266,7 @@ ORDER BY 1, 2;</code></pre>
       </div>
 
       <div class="tab-panel active" data-panel="question">
-        <p class="q-text" data-i18n-html="case4.question">
+        <p class="q-text" data-i18n-html="case5.question">
           צוות השיווק רצה <b>מעקב שוטף אחר ביצועי קמפיינים בערוצי מדיה שונים</b> כדי להחליט היכן להזיז תקציב -
           תוך מעקב עקבי אחרי CTR, CPA ו-ROAS לאורך זמן ולא רק בנקודת זמן בודדת.
         </p>
@@ -2175,28 +2314,28 @@ ORDER BY date, channel;</code></pre>
 
       <div class="tab-panel" data-panel="dashboard">
         <div class="kpi-row">
-          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi1l">סך תקציב (6 חודשים)</div><div class="kv">₪480K</div><div class="kd" data-i18n="case4.kpi1d">מרץ–אוגוסט 2026</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi2l">ROAS ממוצע משוקלל</div><div class="kv good">3.3x</div><div class="kd" data-i18n="case4.kpi2d">כלל הערוצים</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi3l">הערוץ המוביל</div><div class="kv good" style="font-size:1.2rem">Paid Search</div><div class="kd">ROAS 4.5x</div></div>
-          <div class="kpi-card"><div class="kl" data-i18n="case4.kpi4l">הערוץ החלש</div><div class="kv bad" style="font-size:1.2rem">Display</div><div class="kd">ROAS ~1.0x</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case5.kpi1l">סך תקציב (6 חודשים)</div><div class="kv">₪480K</div><div class="kd" data-i18n="case5.kpi1d">מרץ–אוגוסט 2026</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case5.kpi2l">ROAS ממוצע משוקלל</div><div class="kv good">3.3x</div><div class="kd" data-i18n="case5.kpi2d">כלל הערוצים</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case5.kpi3l">הערוץ המוביל</div><div class="kv good" style="font-size:1.2rem">Paid Search</div><div class="kd">ROAS 4.5x</div></div>
+          <div class="kpi-card"><div class="kl" data-i18n="case5.kpi4l">הערוץ החלש</div><div class="kv bad" style="font-size:1.2rem">Display</div><div class="kd">ROAS ~1.0x</div></div>
         </div>
         <div class="charts-grid">
           <div class="chart-wrap">
-            <div class="cw-title"><span data-i18n="case4.chart1Title">CTR לאורך זמן</span> <span class="axis-note">Y: %</span></div>
+            <div class="cw-title"><span data-i18n="case5.chart1Title">CTR לאורך זמן</span> <span class="axis-note">Y: %</span></div>
             <div class="chart-h"><canvas id="chart-mkt-ctr"></canvas></div>
           </div>
           <div class="chart-wrap">
-            <div class="cw-title"><span data-i18n="case4.chart2Title">CPA לאורך זמן</span> <span class="axis-note">Y: ₪</span></div>
+            <div class="cw-title"><span data-i18n="case5.chart2Title">CPA לאורך זמן</span> <span class="axis-note">Y: ₪</span></div>
             <div class="chart-h"><canvas id="chart-mkt-cpa"></canvas></div>
           </div>
           <div class="chart-wrap">
-            <div class="cw-title"><span data-i18n="case4.chart3Title">ROAS לאורך זמן</span> <span class="axis-note" data-i18n="case4.chart3Axis">Y: מכפיל</span></div>
+            <div class="cw-title"><span data-i18n="case5.chart3Title">ROAS לאורך זמן</span> <span class="axis-note" data-i18n="case5.chart3Axis">Y: מכפיל</span></div>
             <div class="chart-h"><canvas id="chart-mkt-roas"></canvas></div>
           </div>
         </div>
         <div class="table-scroll">
           <table class="summary">
-            <thead><tr><th data-i18n="case4.th1">ערוץ</th><th class="num" data-i18n="case4.th2">תקציב</th><th class="num" data-i18n="case4.th3">הכנסה</th><th class="num" data-i18n="case4.th4">ROAS ממוצע</th><th class="num" data-i18n="case4.th5">CPA ממוצע</th></tr></thead>
+            <thead><tr><th data-i18n="case5.th1">ערוץ</th><th class="num" data-i18n="case5.th2">תקציב</th><th class="num" data-i18n="case5.th3">הכנסה</th><th class="num" data-i18n="case5.th4">ROAS ממוצע</th><th class="num" data-i18n="case5.th5">CPA ממוצע</th></tr></thead>
             <tbody>
               <tr><td class="strong">Paid Search</td><td class="num">₪240,000</td><td class="num">₪1,092,000</td><td class="num strong" style="color:var(--good)">4.55x</td><td class="num">₪20.0</td></tr>
               <tr><td>Paid Social</td><td class="num">₪150,000</td><td class="num">₪380,000</td><td class="num">2.53x</td><td class="num">₪29.8</td></tr>
@@ -2210,20 +2349,20 @@ ORDER BY date, channel;</code></pre>
         <div class="insight-block">
           <div>
             <h4 data-i18n="common.howCalculated">איך המדד חושב</h4>
-            <p data-i18n="case4.calc1">CTR = קליקים / חשיפות. CPA = תקציב / המרות. ROAS = הכנסה / תקציב. כל המדדים חושבו הן ברמה יומית והן באגרגציה חודשית לצורך המגמה בדשבורד.</p>
+            <p data-i18n="case5.calc1">CTR = קליקים / חשיפות. CPA = תקציב / המרות. ROAS = הכנסה / תקציב. כל המדדים חושבו הן ברמה יומית והן באגרגציה חודשית לצורך המגמה בדשבורד.</p>
             <h4 style="margin-top:18px" data-i18n="common.assumptions">הנחות עבודה</h4>
             <ul>
-              <li data-i18n="case4.assum1">הכנסה מיוחסת לערוץ לפי מודל Last-Click Attribution בחלון של 7 ימים</li>
-              <li data-i18n="case4.assum2">SAFE_DIVIDE משמש לכל היחסים כדי למנוע שגיאות בימים ללא נתונים</li>
-              <li data-i18n="case4.assum3">ROAS "משוקלל" (Blended) מחושב כהכנסה כוללת חלקי תקציב כולל, לא כממוצע פשוט בין ערוצים</li>
+              <li data-i18n="case5.assum1">הכנסה מיוחסת לערוץ לפי מודל Last-Click Attribution בחלון של 7 ימים</li>
+              <li data-i18n="case5.assum2">SAFE_DIVIDE משמש לכל היחסים כדי למנוע שגיאות בימים ללא נתונים</li>
+              <li data-i18n="case5.assum3">ROAS "משוקלל" (Blended) מחושב כהכנסה כוללת חלקי תקציב כולל, לא כממוצע פשוט בין ערוצים</li>
             </ul>
           </div>
           <div>
             <h4 data-i18n="common.businessConclusion">מסקנה עסקית</h4>
-            <p data-i18n="case4.conclusion">ל-Display ROAS של כ-1.0x - כמעט גבול הרווחיות - בעוד ש-Paid Search שומר על ROAS יציב ועולה של מעל 4x לאורך כל התקופה.</p>
+            <p data-i18n="case5.conclusion">ל-Display ROAS של כ-1.0x - כמעט גבול הרווחיות - בעוד ש-Paid Search שומר על ROAS יציב ועולה של מעל 4x לאורך כל התקופה.</p>
             <div class="conclusion-box">
               <div class="cl" data-i18n="common.recommendation">המלצה</div>
-              <p data-i18n="case4.recommendation">להסיט כ-30% מתקציב ה-Display ל-Paid Search, ולבחון את קריאייטיב ה-Display בנפרד לפני הכנסת תקציב נוסף לערוץ.</p>
+              <p data-i18n="case5.recommendation">להסיט כ-30% מתקציב ה-Display ל-Paid Search, ולבחון את קריאייטיב ה-Display בנפרד לפני הכנסת תקציב נוסף לערוץ.</p>
             </div>
           </div>
         </div>
@@ -2310,7 +2449,12 @@ const LANG_DATA = {
     abUsersTotal: 'סה"כ משתמשים',
     abUsersConverted: 'צפו במוצר',
     abAxisUsers: 'מספר משתמשים',
-    mktMonths: ['מרץ','אפר׳','מאי','יוני','יולי','אוג׳']
+    mktMonths: ['מרץ','אפר׳','מאי','יוני','יולי','אוג׳'],
+    adoptFunnelStages: ['פעילים','נחשפו (ביקרו בעמוד)','אימצו (השתמשו בפועל)'],
+    adoptFunnelUsersLabel: 'משתמשים',
+    adoptFunnelAxisTitle: 'מספר משתמשים',
+    adoptRateLabels: ['שיעור חשיפה','שיעור אימוץ בהינתן חשיפה'],
+    adoptRateAxisY: 'אחוז (%)'
   },
   en: {
     funnelStages: ['First visit','Viewed product','Added to cart','Began checkout','Purchased'],
@@ -2326,7 +2470,12 @@ const LANG_DATA = {
     abUsersTotal: 'Total users',
     abUsersConverted: 'Viewed product',
     abAxisUsers: 'Number of users',
-    mktMonths: ['Mar','Apr','May','Jun','Jul','Aug']
+    mktMonths: ['Mar','Apr','May','Jun','Jul','Aug'],
+    adoptFunnelStages: ['Active','Exposed (visited the page)','Adopted (actually used it)'],
+    adoptFunnelUsersLabel: 'users',
+    adoptFunnelAxisTitle: 'Number of users',
+    adoptRateLabels: ['Exposure rate','Adoption rate given exposure'],
+    adoptRateAxisY: 'Percent (%)'
   }
 };
 
@@ -2336,11 +2485,14 @@ const cohortValues = [
   [100, 58, 47, 41, 37, 34],
   [100, 61, 49, 43, 39, 36],
   [100, 68, 57, 52, 48, null],
-  [100, 63, 51, 45, null, null],
-  [100, 60, 48, null, null, null],
-  [100, 59, null, null, null, null]
+  [100, 67, 56, 50, null, null],
+  [100, 66, 55, null, null, null],
+  [100, 65, null, null, null, null]
 ];
 const monthCols = ['M0','M1','M2','M3','M4','M5'];
+const adoptFunnelUsers = [40000, 11200, 6160];
+const adoptFunnelColors = ['#38bdf8','#2793c2','#16698c'];
+const adoptRateValues = [28.0, 55.0];
 
 function cellColor(v){
   if (v === null) return 'transparent';
@@ -2432,8 +2584,8 @@ function renderRetentionChart(lang){
       labels: monthCols,
       datasets: [
         { label: d.cohortLabels[0], data: cohortValues[0], borderColor: '#5c6b7d', backgroundColor: 'transparent', tension: .3, borderWidth: 2 },
-        { label: d.cohortLabels[1], data: cohortValues[1], borderColor: '#93a4b5', backgroundColor: 'transparent', tension: .3, borderWidth: 2 },
-        { label: d.cohortLabels[2], data: cohortValues[2], borderColor: ACCENT, backgroundColor: 'rgba(56,189,248,.12)', fill: true, tension: .3, borderWidth: 3, pointRadius: 4, pointBackgroundColor: ACCENT }
+        { label: d.cohortLabels[2], data: cohortValues[2], borderColor: ACCENT, backgroundColor: 'rgba(56,189,248,.12)', fill: true, tension: .3, borderWidth: 3, pointRadius: 4, pointBackgroundColor: ACCENT },
+        { label: d.cohortLabels[4], data: cohortValues[4], borderColor: '#7dd3fc', backgroundColor: 'transparent', tension: .3, borderWidth: 2, borderDash: [5,3] }
       ]
     },
     options: {
@@ -2500,6 +2652,51 @@ function renderABCharts(lang){
   });
 }
 
+/* ===================== CASE 3: New Feature Adoption ===================== */
+function renderAdoptionCharts(lang){
+  const d = LANG_DATA[lang];
+  destroyChart('chart-adopt-bar');
+  new Chart(document.getElementById('chart-adopt-bar'), {
+    type: 'bar',
+    data: { labels: d.adoptFunnelStages, datasets: [{ data: adoptFunnelUsers, backgroundColor: adoptFunnelColors, borderRadius: 5, barThickness: 34 }] },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.parsed.x.toLocaleString()} ${d.adoptFunnelUsersLabel}` } },
+        datalabels: { display: true, anchor: 'end', align: 'right', offset: 6, clamp: true, color: '#e7edf3', font: { weight: 700, size: 12 }, formatter: (v) => v.toLocaleString() }
+      },
+      scales: {
+        x: { grid: { color: GRID }, ticks: { callback: v => v.toLocaleString() }, title: { display: true, text: d.adoptFunnelAxisTitle, color: '#5c6b7d' }, suggestedMax: 47000 },
+        y: { grid: { display: false } }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+
+  destroyChart('chart-adopt-curve');
+  new Chart(document.getElementById('chart-adopt-curve'), {
+    type: 'bar',
+    data: { labels: d.adoptRateLabels, datasets: [{ data: adoptRateValues, backgroundColor: [ACCENT, '#5c6b7d'], borderRadius: 8, barThickness: 60 }] },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ${ctx.parsed.y}%` } },
+        datalabels: { display: true, anchor: 'end', align: 'top', color: '#e7edf3', font: { weight: 700, size: 13 }, formatter: v => v + '%' }
+      },
+      scales: {
+        y: { grid: { color: GRID }, ticks: { callback: fmtPct }, title: { display: true, text: d.adoptRateAxisY, color: '#5c6b7d' }, suggestedMax: 70 },
+        x: { grid: { display: false } }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+}
+
 /* ===================== CASE 4: Marketing KPI ===================== */
 const mktData = {
   'Paid Search': { color: ACCENT, ctr: [4.8,5.0,5.1,5.3,5.2,5.5], cpa: [22,21,20,19,20,18], roas: [4.2,4.4,4.5,4.7,4.6,4.9] },
@@ -2550,6 +2747,7 @@ function renderAllCharts(lang){
   renderCohortTable(lang);
   renderRetentionChart(lang);
   renderABCharts(lang);
+  renderAdoptionCharts(lang);
   renderMarketingCharts(lang);
 }
 
@@ -2569,8 +2767,9 @@ const EN = {
 'about.proj2Title':'A/B Testing','about.proj2Sub':'Designing and running statistical experiments',
 'about.proj3Title':'Customer Retention Analysis','about.proj3Sub':'Generating insights for improvement (Retention)',
 'about.proj4Title':'Executive Dashboards','about.proj4Sub':'Ongoing tracking of core KPIs',
+'about.proj5Title':'New Feature Adoption','about.proj5Sub':'Measuring the adoption rate of a new feature launch',
 'cases.eyebrow':'Case Studies','cases.title':'From business question to insight',
-'cases.sub':"This page presents four case studies illustrating my analytical work process:<br>from defining the business question, through writing the query and building the dashboard, to the insights that emerged from the research.",
+'cases.sub':"This page presents five case studies illustrating my analytical work process:<br>from defining the business question, through writing the query and building the dashboard, to the insights that emerged from the research.",
 'case1.title':'Conversion Funnel Analysis - New Visitors (Onboarding)',
 'case1.question':'The product team wanted to understand <b>exactly where new visitors (Onboarding) drop off</b> between the moment they first enter the site (the <code>first_visit</code> event) and making a purchase, during that same first session.<br>Goal: identify the stage with the highest drop-off rate, and accordingly examine an alternative version with UX improvements.',
 'case1.kpi1l':'Overall conversion rate','case1.kpi2l':'Visitors lost','case1.kpi2d':'across the whole funnel','case1.kpi3l':'Biggest drop-off stage','case1.kpi3d':'First visit → Viewed product','case1.kpi4l':'Measurement window','case1.kpi4v':'First session','case1.kpi4d':'3 months of data',
@@ -2589,35 +2788,47 @@ const EN = {
 'case2.kpi1l':'Lift in view_item','case2.kpi1d':'Treatment vs. Control','case2.kpi2l':'Significance (p-value)','case2.kpi2d':'z = 8.64, significant at 95%','case2.kpi3l':'Total sample size','case2.kpi3d':'19,500 simulated per group','case2.kpi4l':'Simulated test window','case2.kpi4v':'2 weeks','case2.kpi4d':'SRM: 50/50 built in by design',
 'case2.chart1Title':'view_item rate by variant','case2.chart1Axis':'Y axis: conversion %','case2.chart2Title':'Users vs. product viewers','case2.chart2Axis':'Y axis: number of users',
 'case2.th1':'Variant','case2.th3':'Viewed product','case2.th4':'view_item rate','case2.rowControl':'Control (current landing page)','case2.rowTreatment':'Treatment (product carousel)',
-'case2.calc1':'Uses a Two-Proportion Z-Test to compare the view_item rate between two independent groups. Pooled Proportion = 0.2122, SE = 0.00414, z = 8.64, p &lt; 0.0001.',
+'case2.calc1':'Uses a Two-Proportion Z-Test to compare the view_item rate between two independent groups. Pooled Proportion = 0.2122, SE = 0.00414, z = 8.64, p < 0.0001.',
 'case2.calc2':'Lift = (Rate Treatment − Rate Control) / Rate Control = (23.01% − 19.43%) / 19.43% = +18.4%.',
 'case2.assum1':'Minimum sample size was calculated in advance (Power Analysis) to detect an ~18% lift at 95% confidence and 80% power - about 2,045 users per group required; the run used 19,500 per group, a comfortable margin',
 'case2.assum2':'The Control group is calibrated exactly to the real rate measured in the GA4 Export (Case 01); the Treatment group is a simulation of a product hypothesis, not an actually measured result',
 'case2.assum3':'SRM (Sample Ratio Mismatch) check: the 50/50 split is built into the table by design since this is simulated data - a live test must verify this on real counts',
 'case2.conclusion':'The simulation - grounded in the real Control (~19.8%) - shows that a product carousel on the landing page could raise the product-view rate by about 18%. This is hypothesis-supporting evidence, not causal proof, since there is no real experiment data yet.',
 'case2.recommendation':'Full rollout of the carousel and monitoring of downstream conversion metrics<ul><li><b>Product decision (Full Rollout):</b> Given the A/B test results showing a statistically significant lift of +18.4% in the product-view rate (p &lt; 0.0001), it is recommended to roll out the "featured products" carousel to 100% of new visitors on the landing page.</li><li><b>Downstream metrics monitoring:</b> Examine whether the increase in <code>view_item</code> translates directly into a rise in downstream conversion metrics, in particular add-to-cart (<code>add_to_cart</code>) and actual purchase (<code>purchase</code>) rates.</li></ul>',
-'case3.title':'Retention & Cohort Analysis by Signup Month',
-'case3.question':'Product management wanted to understand <b>which user cohorts that signed up in different months stay active longer</b>, to examine whether product changes or campaigns run in a given month actually affected retention over time - not just raw signup counts.',
-'case3.kpi1l':'Leading cohort','case3.kpi1v':'Mar 2026','case3.kpi1d':'M3 retention: 52%','case3.kpi2l':'Average retention - month 1','case3.kpi2d':'across all cohorts','case3.kpi3l':'Average retention - month 3','case3.kpi4l':'Gap vs. weakest cohort','case3.kpi4d':'March vs. January, M3',
-'case3.chart1Title':'Retention heatmap by cohort','case3.chart1Axis':'Rows: signup month · Columns: months since signup','case3.chart2Title':'Retention curve - top 3 cohorts','case3.chart2Axis':'X axis: months since signup · Y axis: % active users',
-'case3.calc1':'Retention at month N = number of unique users from the cohort who were active in calendar month N relative to signup, divided by the original cohort size.',
-'case3.calc2':'"Active" was defined as at least one session_start event in that month - continuous activity between months is not required.',
-'case3.assum1':'Cohort is defined by first-activity month, not account-creation date',
-'case3.assum2':'Cohorts that haven\'t yet reached age N months are shown as N/A rather than 0%, to avoid skewing the average',
-'case3.assum3':'Only cohorts of similar sample size were compared (10K–14K users)',
-'case3.conclusion':'The cohort that signed up in March 2026 retains significantly better than its neighboring cohorts (January-February) in every month measured.',
-'case3.recommendation':'The date overlaps with the launch of a redesigned Onboarding flow in early March. Recommend a causal analysis (or retroactive A/B) to confirm the causal link, and if confirmed - consider backporting the component to the existing user base.',
-'case4.title':'Marketing KPI Dashboard - CTR · CPA · ROAS',
-'case4.question':'The marketing team wanted <b>ongoing tracking of campaign performance across media channels</b> to decide where to shift budget - consistently tracking CTR, CPA and ROAS over time rather than at a single point in time.',
-'case4.kpi1l':'Total budget (6 months)','case4.kpi1d':'Mar–Aug 2026','case4.kpi2l':'Average blended ROAS','case4.kpi2d':'all channels','case4.kpi3l':'Leading channel','case4.kpi4l':'Weakest channel',
-'case4.chart1Title':'CTR over time','case4.chart2Title':'CPA over time','case4.chart3Title':'ROAS over time','case4.chart3Axis':'Y: multiplier',
-'case4.th1':'Channel','case4.th2':'Budget','case4.th3':'Revenue','case4.th4':'Average ROAS','case4.th5':'Average CPA',
-'case4.calc1':'CTR = clicks / impressions. CPA = budget / conversions. ROAS = revenue / budget. All metrics were calculated both daily and in monthly aggregation for the dashboard trend.',
-'case4.assum1':'Revenue is attributed to a channel by a Last-Click Attribution model within a 7-day window',
-'case4.assum2':'SAFE_DIVIDE is used for all ratios to prevent errors on days with no data',
-'case4.assum3':'"Blended" ROAS is calculated as total revenue divided by total budget, not a simple average across channels',
-'case4.conclusion':'Display has a ROAS of about 1.0x - near the profitability line - while Paid Search maintains a stable, rising ROAS of over 4x throughout the period.',
-'case4.recommendation':'Shift about 30% of the Display budget to Paid Search, and review the Display creative separately before adding more budget to the channel.',
+'case3.title':"New Feature Adoption - Saved Searches (Exposure vs. Adoption)",
+'case3.question':'<b>Business challenge:</b><br>The overall adoption rate of a new feature (Saved Searches) stands at just 15.4% of all active users, sampled about a month after the feature launch - a low number, but it is unclear whether this is because users simply are not aware the feature exists, or because they are aware of it and choose not to use it.<br><br><b>Goal of the analysis:</b><br>Break the overall adoption rate down into two separate stages:<br>exposure and adoption given exposure,<br>in order to examine whether this is a distribution/placement problem (users are not exposed to the feature) or a value problem (users are exposed but do not find value in the feature).<br><br><b>Hypothesis:</b><br>Most of the gap in the overall adoption rate is driven by a low exposure rate - most users never reach the page where the feature is shown - rather than by a lack of interest in the feature among those who were exposed to it.',
+'case3.kpi1l':'Exposure rate','case3.kpi1d':'11,200 out of 40,000 active users','case3.kpi2l':'Adoption rate given exposure','case3.kpi2d':'6,160 out of 11,200 exposed','case3.kpi3l':'Overall adoption rate','case3.kpi3d':'6,160 out of 40,000 active users','case3.kpi4l':'Diagnosis','case3.kpi4v':'Discovery problem','case3.kpi4d':'Not a feature-value problem',
+'case3.chart1Title':'Exposure & adoption funnel','case3.chart1Axis':'X axis: number of users · Y axis: stage','case3.chart2Title':'Exposure vs. adoption given exposure','case3.chart2Axis':'Y axis: percent (%)',
+'case3.th1':'Stage','case3.th2':'Users','case3.th3':'% of active','case3.th4':'% of previous stage','case3.rowEligible':'Active','case3.rowExposed':'Exposed (visited the page)','case3.rowAdopted':'Adopted (actually used it)',
+'case3.calc1':'Overall adoption rate (15.4%) = adopted users divided by all active users.<br>Exposure rate (28.0%) = exposed users divided by all active users.<br>Adoption rate given exposure (55.0%) = adopted users divided by exposed users.',
+'case3.assum1':'"Exposure" is defined as visiting the page where the feature is displayed',
+'case3.assum2':'The data is a simulation for illustrating the analysis, and does not represent an actual measurement.',
+'case3.assum3':'The feature launched to the entire active user base at once (no staged rollout), and the measurement was taken exactly 30 days after launch - so every user gets an equal, fully-elapsed observation window.',
+'case3.conclusion':'The low overall adoption rate of the new feature (15.4%) is explained by a low exposure rate (28.0%), not by a lack of interest in the feature: of the users who were exposed, more than half (55.0%) chose to use it - indicating relatively high value among the users who were exposed to the feature.',
+'case3.recommendation':'Promote exposure, not the feature itself<ul><li><b>Product decision (Improve Discovery):</b> Invest in the placement and visual prominence of the feature on the relevant pages (e.g. a targeted empty state, a first-visit tooltip, or stronger visual emphasis) before considering changes to the feature itself.</li><li><b>Re-measurement:</b> After improving exposure, re-measure the exposure rate and confirm that the adoption-rate-given-exposure (55.0%) holds up among the new wave of exposed users - since increased exposure may also reach users with lower inherent interest in the feature.</li></ul>',
+'case4.title':'Retention & Cohort Analysis by Signup Month',
+'case4.question':'<b>Business challenge:</b><br>Product management wanted to understand which user cohorts, signed up in different months, stay active longer.<br><br><b>Goal of the analysis:</b><br>Examine whether product changes or campaigns run in a given month actually affected retention over time - not just raw signup counts.',
+'case4.kpi1l':'Start of sustained improvement','case4.kpi1v':'Mar 2026','case4.kpi1d':'Continues through April-June','case4.kpi2l':'Average retention - month 1','case4.kpi2d':'across all cohorts','case4.kpi3l':'Average retention - month 3','case4.kpi4l':'Retention gap: after vs. before the change','case4.kpi4d':'March vs. January, M3',
+'case4.chart1Title':'Retention heatmap by cohort','case4.chart1Axis':'Rows: signup month · Columns: months since signup','case4.chart2Title':'Retention curve - campaign change impact over time','case4.chart2Axis':'X axis: months since signup · Y axis: % active users',
+'case4.calc1':'Retention at month N = number of unique users from the cohort who were active in calendar month N relative to signup, divided by the original cohort size.',
+'case4.calc2':'"Active" was defined as at least one session_start event in that month - continuous activity between months is not required.',
+'case4.assum1':'Cohort is defined by first-activity month, not account-creation date',
+'case4.assum2':'Cohorts that haven\'t yet reached age N months are shown as N/A rather than 0%, to avoid skewing the average',
+'case4.assum3':'Only cohorts of similar sample size were compared (10K–14K users)',
+'case4.assum4':'A cohort-month-level analysis alone cannot distinguish between switching to a more targeted campaign within the same channel (Google Ads) and a general product change; you need to track that specific Campaign ID over time (not just the general channel) to isolate the correct effect',
+'case4.conclusion':'Every cohort that signed up from March 2026 onward (March, April, May, June) shows a high and consistent retention rate relative to the cohorts that preceded them (January-February), in every month measured. In other words, a positive change occurred starting in March that caused the increase in retention.<br><br>We now need to examine whether the increase in retention stems from a product change that occurred in March or from a campaign change.<br><br>Prior knowledge - starting in early March, a campaign change took place on Google Ads:<br>moving from a generic campaign (broad keywords and audience) to an audience-targeted campaign.<br><br><b>How can we test whether the increase in retention stems from a product change or a targeted campaign?</b><br>Check the retention rates of users who signed up from March 2026 onward, broken down by the different campaigns:<br>If the retention rate of users from other campaigns in that same period (March-June) stays the same as the observed baseline level (January-February) - this reinforces the hypothesis that the improvement comes specifically from the targeted campaign, not a sweeping product change.<br>Conversely, if users from other campaigns also show higher retention relative to the baseline level - that is evidence of a product change that affected all new users.',
+'case4.recommendation':'Recommend tracking the retention rate of that specific targeted campaign (by Campaign ID) over time, confirming that the improvement persists consistently in the following months, and investing accordingly in audience-targeted campaigns.',
+'case5.title':'Marketing KPI Dashboard - CTR · CPA · ROAS',
+'case5.question':'The marketing team wanted <b>ongoing tracking of campaign performance across media channels</b> to decide where to shift budget - consistently tracking CTR, CPA and ROAS over time rather than at a single point in time.',
+'case5.kpi1l':'Total budget (6 months)','case5.kpi1d':'Mar–Aug 2026','case5.kpi2l':'Average blended ROAS','case5.kpi2d':'all channels','case5.kpi3l':'Leading channel','case5.kpi4l':'Weakest channel',
+'case5.chart1Title':'CTR over time','case5.chart2Title':'CPA over time','case5.chart3Title':'ROAS over time','case5.chart3Axis':'Y: multiplier',
+'case5.th1':'Channel','case5.th2':'Budget','case5.th3':'Revenue','case5.th4':'Average ROAS','case5.th5':'Average CPA',
+'case5.calc1':'CTR = clicks / impressions. CPA = budget / conversions. ROAS = revenue / budget. All metrics were calculated both daily and in monthly aggregation for the dashboard trend.',
+'case5.assum1':'Revenue is attributed to a channel by a Last-Click Attribution model within a 7-day window',
+'case5.assum2':'SAFE_DIVIDE is used for all ratios to prevent errors on days with no data',
+'case5.assum3':'"Blended" ROAS is calculated as total revenue divided by total budget, not a simple average across channels',
+'case5.conclusion':'Display has a ROAS of about 1.0x - near the profitability line - while Paid Search maintains a stable, rising ROAS of over 4x throughout the period.',
+'case5.recommendation':'Shift about 30% of the Display budget to Paid Search, and review the Display creative separately before adding more budget to the channel.',
 'tools.sub':'The tools I work with',
 'contact.cv':'📄 Download CV (PDF)','footer.text':'© 2026 Keren Lukov · Built as a single self-contained HTML file, no server dependency',
 'common.howCalculated':'How the metric was calculated','common.assumptions':'Working assumptions','common.businessConclusion':'Business conclusion','common.recommendation':'Recommendation','common.users':'Users','common.ci95':'95% confidence interval',
